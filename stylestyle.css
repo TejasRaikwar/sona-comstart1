@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 .s-main-cont {
@@ -33,10 +34,13 @@
 
 .main-cont .m-inr {
     display: flex;
+    max-width: 100%;
 }
 
 .m-inr .sidebar {
-    min-width: 17rem;
+    /* width; */
+    /* flex: 0 0 25%; */
+    width: 20%;
     background-color: #252531;
     color: white;
     border-right: 1px solid rgb(73, 73, 73);
@@ -71,7 +75,7 @@
 }
 
 .m-inr .main-content {
-    background-color: gren;
+    /* background-color: gren; */
 }
 
 .sidebar-links {
@@ -80,14 +84,17 @@
 
 .main-content {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     box-sizing: border-box;
     padding: 13px;
     gap: 13px;
+    width: 80%;
 }
 
 .main-content .main-left {
-    flex: 0 0 70%;
+    /* flex: 0 0 70%; */
+    width: 70%;
+
 }
 
 .main-content .main-right {
@@ -224,4 +231,79 @@
 
 .buttons button:first-of-type {
     margin-right: 10px;
+}
+
+/* slick slider */
+.banner-slider {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.banner-slider .slick-slide {
+    text-align: center;
+    color: #fff;
+    background: #3498db;
+    width: 100%;
+}
+
+.banner-slider .slick-prev,
+.banner-slider .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 90% !important;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: black;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+}
+
+.banner-slider .slick-prev:hover,
+.banner-slider .slick-prev:focus,
+.banner-slider .slick-next:hover,
+.banner-slider .slick-next:focus {
+    color: transparent;
+    outline: none;
+    /* background: transparent; */
+}
+
+.banner-slider .slick-prev {
+    left: 88% !important;
+    z-index: 10;
+}
+
+.banner-slider .slick-next {
+    right: 30px !important;
+}
+
+.banner-slider .slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 40px !important;
+    line-height: 1;
+
+    color: white !important;
+}
+
+.banner-slider .slick-prev:before {
+    content: '←';
+}
+
+.banner-slider .slick-next:before {
+    content: '→';
+}
+
+.banner-slider .slider img {
+    position: relative;
+    height: 22rem;
+    width: 100%;
 }
